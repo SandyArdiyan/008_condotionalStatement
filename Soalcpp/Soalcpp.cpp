@@ -1,33 +1,39 @@
-
-// Soal.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Program Kelulusan
+// Buatlah program dimana pengguna akan memasukn nilai Matematika dan Bahasa
+// Jika nilai rerata lebih dari 60 atau Matematika lebih dari 70 maka ditanyakan lulus
+// Selain daripada itu tidak lulus
 
 #include <iostream>
 using namespace std;
 
-int main() {
-	int nilMtk, nilBahasa, nilFisika;
-	string status;
-	float rerata;
+int main()
+{
+	int NilaiMTK, NilaiBahasa, NilaiFisika;
+	string status, status2;
+	float Rerata;
 
-	cout << Nilai Matematika : << endl;
-	cin >> nilMtk;
-	cout << Nilai Bahasa : << endl;
-	cin >> nilBahasa;
-	cout << Nilai Fisika : << endl;
-	cin >> nilFisika;
+	cout << "Nilai Matematika" << endl;
+	cin >> NilaiMTK;
+	cout << "Nilai Bahasa" << endl;
+	cin >> NilaiBahasa;
+	cout << "Nilai Fisika" << endl;
+	cin >> NilaiFisika;
 
-	rerata = (nilBahasa + nilMtk) / 2;
+	Rerata = (NilaiMTK + NilaiBahasa) / 2;
 
-	if (nilMtk > 70 || rerata > 60) {
-		status = Lulus;
+	if (NilaiMTK > 70 || Rerata > 60)
+	{
+		status = "Lulus";
+		if (NilaiFisika >= 90)
+			status2 = "Lulusan Terbaik";
 	}
-	else {
-		status = Tidak Lulus;
+	else
+	{
+		status = "Tidak Lulus";
 	}
-
-	cout << Nilai Matematika : << nilMtk << endl;
-	cout << Nilai Bahasa : << nilBahasa << endl;
-	cout << Nilai Fisika : << nilFisika << endl;
-	cout << Status Kelulusan : << status;
+	cout << "Nilai Matematika: " << NilaiMTK << endl;
+	cout << "Nilai Bahasa" << NilaiBahasa << endl;
+	cout << "Nilai Fisika" << NilaiFisika << endl;
+	cout << "Status Kelulusan: " << status << endl;
+	cout << "Status Mahasiswa: " << status2;
 }
